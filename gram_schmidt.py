@@ -2,16 +2,6 @@ from manim import *
 import numpy as np
 
 
-class Intro(Scene):
-    def construct(self):
-        self.camera.background_color = BLUE_A
-
-        circle = Circle(2, stroke_color=BLACK)
-
-        self.play(Create(circle))
-        self.wait()
-
-
 class Vector3D(Arrow3D):
     def __init__(self, axes, end, **kwargs):
         super().__init__(axes.c2p(0, 0, 0), axes.c2p(*end), resolution=[1, 8], **kwargs)
